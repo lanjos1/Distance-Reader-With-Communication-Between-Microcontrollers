@@ -10,10 +10,10 @@ This project establishes a robust embedded ecosystem consisting of two **Arduino
 
 ## 🚀 System Architecture & Features
 * **Master-Slave Serial Network:** High-fidelity serial communication to synchronize data streams between isolated microcontrollers.
-* **Ultrasonic Distance Tracking:** Accurate, real-time spatial awareness powered by the HC-SR04 sensor.
-* **Multilevel Visual Signaling:** A dynamic 3-LED status system (Blue, Yellow, Red) representing safe, warning, and critical proximity zones.
-* **Intelligent Telemetry Dashboard:** A liquid-crystal display (16x2 LCD) on the Slave end presenting contextual user text based on real-time distance.
-* **Dynamic Refresh Rate Control:** Integrated analog potentiometer allowing physical modulation of system update frequencies and communication pacing.
+* **Ultrasonic Distance Tracking:** Accurate, real-time spatial awareness powered by the HC-SR04 sensor connected to the Master node.
+* **Multilevel Visual Signaling:** A dynamic 3-LED status system (Blue, Yellow, Red) driven by the Slave node representing safe, warning, and critical proximity zones.
+* **Intelligent Telemetry Dashboard:** A liquid-crystal display (16x2 LCD) on the Slave end presenting contextual user text based on real-time distance data.
+* **Brightness/Contrast Control:** Integrated analog potentiometer dedicated to physically tuning the display contrast and text legibility.
 
 ## 🛠️ Technical Specifications (Components)
 
@@ -21,7 +21,7 @@ This project establishes a robust embedded ecosystem consisting of two **Arduino
 * **2x Microcontrollers:** Arduino UNO R3 (1x Master, 1x Slave).
 * **1x Ultrasonic Sensor:** HC-SR04 (Distance detection module).
 * **1x LCD Display:** 16x2 Liquid Crystal Display (Output character monitor).
-* **1x Potentiometer:** Used to calibrate and control the sensor loop update intervals.
+* **1x Potentiometer:** Used for fine-tuning the contrast and visibility of the LCD screen.
 * **3x LEDs:** Diagnostic indicators (1x Blue, 1x Yellow, 1x Red).
 * **3x Resistors:** 220 Ω resistors for current-limiting LED protection.
 * **2x Protoboards:** For component placement and power rail distribution.
@@ -42,9 +42,9 @@ The master node processes sensor loops and converts threshold rules into structu
 
 ### Pinout Mapping
 * **HC-SR04 (Master):** `Trigger` mapped to Digital Pin 7; `Echo` mapped to Digital Pin 6.
-* **LED Status Matrix (Slave):** Blue (Safe), Yellow (Warning), and Red (Critical Danger) connected to designated PWM/Digital outputs with 220 Ω resistors.
+* **LED Status Matrix (Slave):** Blue (Safe), Yellow (Warning), and Red (Critical Danger) connected to designated digital outputs with 220 Ω resistors.
 * **LCD Display (Slave):** Wired using standard parallel interface pins (`RS`, `E`, `D4`, `D5`, `D6`, `D7`) to monitor incoming buffer text.
-* **Potentiometer (Master):** Connected to Analog Pin `A0` to adjust loop latency.
+* **Potentiometer (Slave):** Wired to the contrast control pin (`V0`) of the LCD display to adjust character visibility.
 
 ## 🎮 How to Setup and Run
 
@@ -55,4 +55,3 @@ The master node processes sensor loops and converts threshold rules into structu
 
 ---
 Developed as a practical laboratory application for Embedded Systems engineering.
-
