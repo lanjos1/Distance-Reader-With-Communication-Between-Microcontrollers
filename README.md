@@ -8,14 +8,14 @@ This project establishes a robust embedded ecosystem consisting of two **Arduino
   <img src="images/esquema-arduino.png" width="600" alt="System Circuit Layout"/>
 </div>
 
-## 🚀 System Architecture & Features
+## System Architecture & Features
 * **Master-Slave Serial Network:** High-fidelity serial communication to synchronize data streams between isolated microcontrollers.
 * **Ultrasonic Distance Tracking:** Accurate, real-time spatial awareness powered by the HC-SR04 sensor connected to the Master node.
 * **Multilevel Visual Signaling:** A dynamic 3-LED status system (Blue, Yellow, Red) driven by the Slave node representing safe, warning, and critical proximity zones.
 * **Intelligent Telemetry Dashboard:** A liquid-crystal display (16x2 LCD) on the Slave end presenting contextual user text based on real-time distance data.
 * **Brightness/Contrast Control:** Integrated analog potentiometer dedicated to physically tuning the display contrast and text legibility.
 
-## 🛠️ Technical Specifications (Components)
+## Technical Specifications
 
 ### Hardware Components
 * **2x Microcontrollers:** Arduino UNO R3 (1x Master, 1x Slave).
@@ -32,7 +32,7 @@ This project establishes a robust embedded ecosystem consisting of two **Arduino
 * **Proteus / TinkerCAD:** Used for schematic capture, circuit design, and simulation validation.
 * **GitHub:** Repository hosting and code versioning.
 
-## 🔌 Communication & Interconnection Protocol
+## Communication & Interconnection Protocol
 
 The master node processes sensor loops and converts threshold rules into structural packet payloads transmitted through hardware serial ports (`TX`/`RX`).
 
@@ -46,7 +46,7 @@ The master node processes sensor loops and converts threshold rules into structu
 * **LCD Display (Slave):** Wired using standard parallel interface pins (`RS`, `E`, `D4`, `D5`, `D6`, `D7`) to monitor incoming buffer text.
 * **Potentiometer (Slave):** Wired to the contrast control pin (`V0`) of the LCD display to adjust character visibility.
 
-## 🎮 How to Setup and Run
+## How to Setup and Run
 
 1. **Hardware Assembly:** Assemble the circuit components onto your protoboards following the system schematic layout (`images/esquema-arduino.png`). Ensure both Arduino boards share a single unified Ground (`GND`).
 2. **Flash the Master Firmware:** Open the Master node source code in the Arduino IDE and upload it to the designated transmitting Arduino.
