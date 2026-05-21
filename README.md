@@ -3,7 +3,7 @@
 [![Watch the Video](https://img.shields.io/badge/YouTube-Project_Video-red?logo=youtube)](https://youtu.be/DNFJZB2kEZk)
 [![Tinkercad Simulation](https://img.shields.io/badge/Tinkercad-System_Simulation-blue)](https://www.tinkercad.com/things/3Du9q5At9HA-distance-reader-with-communication-between-microcontrollers)
 
-This project establishes a robust embedded ecosystem consisting of two **Arduino UNO** microcontrollers communicating over a Master-Slave architecture via **Serial Communication**. The system acts as an automated smart distance reader, utilizing an ultrasonic sensor to monitor distances, processing the logic on a Master node, and transmitting specific actions, system states, and telemetry data to a Slave node for physical user feedback.
+This project establishes a embedded ecosystem consisting of two **Arduino UNO** microcontrollers communicating over a Master-Slave architecture via **Serial Communication**. The system acts as an automated smart distance reader, utilizing an ultrasonic sensor to monitor distances, processing the logic on a Master node, and transmitting specific actions, system states, and telemetry data to a Slave node for physical user feedback.
 
 <div align="center">
   <img src="images/esquema-arduino.png" width="600" alt="System Circuit Layout"/>
